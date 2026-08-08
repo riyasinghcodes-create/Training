@@ -24,6 +24,7 @@ namespace productservice.controllers
         [HttpGet(Name = "GetAllProducts")]
         public async Task<IActionResult> GetAll()
         {
+            //sandeep karan
             var products = await _context.Products.ToListAsync();
             return Ok(new
             {
