@@ -1,0 +1,20 @@
+trigger:
+- main
+
+pool:
+  name: sandeepTraining
+
+steps:
+- task: UseDotNet@2
+  inputs:
+    packageType: 'sdk'
+    version: '10.x'
+
+- script: dotnet restore src/productservice/productservice.csproj
+  displayName: 'Restore'
+
+- script: dotnet build src/productservice/productservice.csproj --no-restore
+  displayName: 'Build'
+
+- script: dotnet test test/Mytests/Mytests.csproj
+  displayName: 'Test'
