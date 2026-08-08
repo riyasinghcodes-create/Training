@@ -10,7 +10,7 @@ namespace productservice.controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    
+
 
     public class ProductController : ControllerBase
     {
@@ -25,7 +25,11 @@ namespace productservice.controllers
         public async Task<IActionResult> GetAll()
         {
             var products = await _context.Products.ToListAsync();
-            return Ok(products);
+            return Ok(new
+            {
+                count = products.Count,
+                products
+            });
         }
 
         [HttpGet("{name}", Name = "GetProductByName")]

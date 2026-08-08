@@ -161,3 +161,4 @@ C:\MyWebApiApp\mywebapiapp\src\productservice\obj\Debug\net10.0\refint\productse
 C:\MyWebApiApp\mywebapiapp\src\productservice\obj\Debug\net10.0\productservice.pdb
 C:\MyWebApiApp\mywebapiapp\src\productservice\obj\Debug\net10.0\productservice.genruntimeconfig.cache
 C:\MyWebApiApp\mywebapiapp\src\productservice\obj\Debug\net10.0\ref\productservice.dll
+C:\MyWebApiApp\mywebapiapp\src\productservice\obj\Debug\net10.0\productservice.sourcelink.json
