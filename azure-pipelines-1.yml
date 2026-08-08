@@ -18,3 +18,13 @@ steps:
 
 - script: dotnet test test/Mytests/Mytests.csproj
   displayName: 'Test'
+
+- script: dotnet publish src/productservice/productservice.csproj -c Release -o $(Build.ArtifactStagingDirectory)
+  displayName: 'Publish'
+
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'YOUR-SERVICE-CONNECTION'
+    appType: 'webApp'
+    appName: 'YOUR-APP-SERVICE-NAME'
+    package: '$(Build.ArtifactStagingDirectory)'
